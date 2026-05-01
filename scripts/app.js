@@ -1,31 +1,27 @@
 // ============================================
-// MAIN APPLICATION LOGIC
+// ALL-IN-ONE PORTFOLIO SCRIPT
 // ============================================
 
-class Portfolio {
+console.log('Portfolio script loaded');
+
+class PortfolioApp {
     constructor() {
+        this.projects = [];
+        this.services = [];
         this.init();
     }
 
     init() {
+        console.log('Initializing portfolio...');
         this.initNavigation();
-        this.initScrollAnimations();
         this.initTypingEffect();
-        this.loadProjects();
         this.initSkillAnimations();
+        this.loadProjects();
+        this.loadServices();
+        this.initModals();
     }
 
-    initServices() {
-
-}
-
-closeModal() {
-    const modal = document.getElementById('projectModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-    // Navigation
+    // ==================== NAVIGATION ====================
     initNavigation() {
         const navbar = document.getElementById('navbar');
         const hamburger = document.getElementById('hamburger');
@@ -42,18 +38,18 @@ closeModal() {
         });
 
         // Mobile menu toggle
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
 
         // Close menu on link click
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                
-                // Update active state
+                hamburger?.classList.remove('active');
+                navMenu?.classList.remove('active');
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
             });
@@ -65,37 +61,13 @@ closeModal() {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
     }
 
-    // Scroll Animations
-    initScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements
-        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stagger-item').forEach(el => {
-            observer.observe(el);
-        });
-    }
-
-    // Typing Effect
+    // ==================== TYPING EFFECT ====================
     initTypingEffect() {
         const typingText = document.querySelector('.typing-text');
         if (!typingText) return;
@@ -109,7 +81,6 @@ closeModal() {
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typingSpeed = 100;
 
         const type = () => {
             const currentText = texts[textIndex];
@@ -117,12 +88,12 @@ closeModal() {
             if (isDeleting) {
                 typingText.textContent = currentText.substring(0, charIndex - 1);
                 charIndex--;
-                typingSpeed = 50;
             } else {
                 typingText.textContent = currentText.substring(0, charIndex + 1);
                 charIndex++;
-                typingSpeed = 100;
             }
+
+            let typingSpeed = isDeleting ? 50 : 100;
 
             if (!isDeleting && charIndex === currentText.length) {
                 isDeleting = true;
@@ -139,13 +110,33 @@ closeModal() {
         type();
     }
 
-    // Load Projects
+    // ==================== SKILLS ====================
+    initSkillAnimations() {
+        const skillItems = document.querySelectorAll('.skill-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillItems.forEach(item => observer.observe(item));
+    }
+
+    // ==================== PROJECTS ====================
     async loadProjects() {
+        console.log('Loading projects...');
         try {
             const response = await fetch('data/projects.json');
+            if (!response.ok) throw new Error('Failed to load projects');
+            
             const data = await response.json();
-            window.projectsData = data.projects;
-            this.renderProjects(data.projects);
+            this.projects = data.projects;
+            console.log('Projects loaded:', this.projects.length);
+            
+            this.renderProjects(this.projects);
             this.initProjectFilters();
         } catch (error) {
             console.error('Error loading projects:', error);
@@ -158,7 +149,7 @@ closeModal() {
         if (!grid) return;
 
         grid.innerHTML = projects.map(project => `
-            <div class="project-card fade-in" data-category="${project.category}" data-id="${project.id}">
+            <div class="project-card" data-category="${project.category}" data-id="${project.id}">
                 <div class="project-header">
                     <div class="project-icon">${project.icon}</div>
                     <span class="project-category">${project.category}</span>
@@ -169,7 +160,6 @@ closeModal() {
                     ${project.techStack.slice(0, 4).map(tech => `
                         <span class="tech-badge">${tech}</span>
                     `).join('')}
-                    ${project.techStack.length > 4 ? `<span class="tech-badge">+${project.techStack.length - 4}</span>` : ''}
                 </div>
                 <div class="project-footer">
                     <button class="view-details" data-id="${project.id}">
@@ -186,9 +176,6 @@ closeModal() {
                 this.openProjectModal(projectId);
             });
         });
-
-        // Reinitialize scroll animations
-        this.initScrollAnimations();
     }
 
     initProjectFilters() {
@@ -197,20 +184,16 @@ closeModal() {
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active state
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 const filter = btn.dataset.filter;
 
-                // Filter projects
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.dataset.category === filter) {
                         card.style.display = 'block';
-                        setTimeout(() => card.classList.add('visible'), 10);
                     } else {
-                        card.classList.remove('visible');
-                        setTimeout(() => card.style.display = 'none', 300);
+                        card.style.display = 'none';
                     }
                 });
             });
@@ -218,7 +201,7 @@ closeModal() {
     }
 
     openProjectModal(projectId) {
-        const project = window.projectsData.find(p => p.id === projectId);
+        const project = this.projects.find(p => p.id === projectId);
         if (!project) return;
 
         const modal = document.getElementById('projectModal');
@@ -229,12 +212,10 @@ closeModal() {
                 <h2 class="modal-title">${project.title}</h2>
                 <div class="modal-meta">
                     <span class="meta-item">
-                        <i class="fas fa-folder"></i>
-                        ${project.category}
+                        <i class="fas fa-folder"></i> ${project.category}
                     </span>
                     <span class="meta-item">
-                        <i class="fas fa-code"></i>
-                        ${project.techStack.length} Technologies
+                        <i class="fas fa-code"></i> ${project.techStack.length} Technologies
                     </span>
                 </div>
             </div>
@@ -242,7 +223,7 @@ closeModal() {
             <div class="project-gallery">
                 <div class="gallery-main">
                     ${project.images.map((img, index) => `
-                        <img src="${img}" alt="${project.title} - Image ${index + 1}" 
+                        <img src="${img}" alt="${project.title}" 
                              class="gallery-image ${index === 0 ? 'active' : ''}" 
                              data-index="${index}">
                     `).join('')}
@@ -257,7 +238,7 @@ closeModal() {
                 </div>
                 <div class="gallery-thumbnails">
                     ${project.images.map((img, index) => `
-                        <img src="${img}" alt="Thumbnail ${index + 1}" 
+                        <img src="${img}" alt="Thumbnail" 
                              class="thumbnail ${index === 0 ? 'active' : ''}" 
                              data-index="${index}">
                     `).join('')}
@@ -273,14 +254,14 @@ closeModal() {
                 <div class="detail-section">
                     <h3><i class="fas fa-list"></i> Key Features</h3>
                     <ul class="features-list">
-                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                        ${project.features.map(f => `<li>${f}</li>`).join('')}
                     </ul>
                 </div>
 
                 <div class="detail-section">
                     <h3><i class="fas fa-tools"></i> Technologies Used</h3>
                     <div class="project-tech">
-                        ${project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+                        ${project.techStack.map(t => `<span class="tech-badge">${t}</span>`).join('')}
                     </div>
                 </div>
 
@@ -307,46 +288,7 @@ closeModal() {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-            // Close handlers
-    const closeBtn = document.getElementById('closeProjectModal');
-    const overlay = modal.querySelector('.modal-overlay');
-
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    };
-
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-
-    // ESC key to close
-    const escHandler = (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-            document.removeEventListener('keydown', escHandler);
-        }
-    };
-    document.addEventListener('keydown', escHandler);
-
-
-        // Initialize gallery
         this.initGallery();
-
-        // Close handlers
-        const closeBtn = modal.querySelector('.modal-close');
-        const overlay = modal.querySelector('.modal-overlay');
-
-        closeBtn.addEventListener('click', () => this.closeModal());
-        overlay.addEventListener('click', () => this.closeModal());
-
-        // ESC key to close
-        const escHandler = (e) => {
-            if (e.key === 'Escape') {
-                this.closeModal();
-                document.removeEventListener('keydown', escHandler);
-            }
-        };
-        document.addEventListener('keydown', escHandler);
     }
 
     initGallery() {
@@ -359,18 +301,17 @@ closeModal() {
         const showImage = (index) => {
             images.forEach(img => img.classList.remove('active'));
             thumbnails.forEach(thumb => thumb.classList.remove('active'));
-            
             images[index].classList.add('active');
             thumbnails[index].classList.add('active');
             currentIndex = index;
         };
 
-        prevBtn.addEventListener('click', () => {
+        prevBtn?.addEventListener('click', () => {
             const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
             showImage(newIndex);
         });
 
-        nextBtn.addEventListener('click', () => {
+        nextBtn?.addEventListener('click', () => {
             const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
             showImage(newIndex);
         });
@@ -380,73 +321,155 @@ closeModal() {
                 showImage(parseInt(thumb.dataset.index));
             });
         });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevBtn.click();
-            if (e.key === 'ArrowRight') nextBtn.click();
-        });
-    }
-
-    closeModal() {
-        const modal = document.getElementById('projectModal');
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
     }
 
     showProjectError() {
         const grid = document.getElementById('projectsGrid');
         if (!grid) return;
-
         grid.innerHTML = `
             <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
                 <p style="color: var(--text-secondary);">
-                    <i class="fas fa-exclamation-circle" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
-                    Unable to load projects. Please try again later.
+                    <i class="fas fa-exclamation-circle" style="font-size: 2rem;"></i><br>
+                    Unable to load projects. Please check data/projects.json
                 </p>
             </div>
         `;
     }
 
-    // Skill Animations
-    initSkillAnimations() {
-        const skillItems = document.querySelectorAll('.skill-item');
-        
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.5 });
+    // ==================== SERVICES ====================
+    async loadServices() {
+        console.log('Loading services...');
+        try {
+            const response = await fetch('data/services.json');
+            if (!response.ok) throw new Error('Failed to load services');
+            
+            const data = await response.json();
+            this.services = data.services;
+            console.log('Services loaded:', this.services.length);
+            
+            this.renderServices(data);
+        } catch (error) {
+            console.error('Error loading services:', error);
+            this.showServiceError();
+        }
+    }
 
-        skillItems.forEach(item => skillObserver.observe(item));
+    renderServices(data) {
+        const grid = document.getElementById('servicesGrid');
+        if (!grid) return;
+
+        grid.innerHTML = data.services.map(service => `
+            <div class="service-card">
+                <div class="service-header">
+                    <div class="service-icon">${service.icon}</div>
+                    <div class="service-title-group">
+                        <h3 class="service-title">${service.title}</h3>
+                        <p class="service-tagline">${service.tagline}</p>
+                    </div>
+                </div>
+                <p class="service-description">${service.description}</p>
+                <ul class="service-features">
+                    ${service.features.slice(0, 5).map(f => `<li>${f}</li>`).join('')}
+                </ul>
+                <div class="service-technologies">
+                    ${service.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                </div>
+                <div class="service-meta">
+                    <span class="meta-badge">
+                        <i class="fas fa-dollar-sign"></i> ${service.pricing}
+                    </span>
+                    <span class="meta-badge">
+                        <i class="far fa-clock"></i> ${service.deliveryTime}
+                    </span>
+                </div>
+            </div>
+        `).join('');
+
+        // Render process
+        const processSteps = document.getElementById('processSteps');
+        if (processSteps && data.process) {
+            processSteps.innerHTML = data.process.map(step => `
+                <div class="process-step">
+                    <div class="step-number">
+                        <span class="step-icon">${step.icon}</span>
+                    </div>
+                    <h4 class="step-title">${step.title}</h4>
+                    <p class="step-description">${step.description}</p>
+                </div>
+            `).join('');
+        }
+
+        // Update CTA if provided
+        if (data.cta) {
+            const ctaNote = document.getElementById('ctaNote');
+            if (ctaNote) {
+                ctaNote.innerHTML = `<i class="fas fa-info-circle"></i> ${data.cta.note}`;
+            }
+        }
+    }
+
+    showServiceError() {
+        const grid = document.getElementById('servicesGrid');
+        if (!grid) return;
+        grid.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                <p style="color: var(--text-secondary);">
+                    <i class="fas fa-exclamation-circle" style="font-size: 2rem;"></i><br>
+                    Unable to load services. Please check data/services.json
+                </p>
+            </div>
+        `;
+    }
+
+    // ==================== MODALS ====================
+    initModals() {
+        // Project Modal
+        const projectModal = document.getElementById('projectModal');
+        const closeProjectBtn = document.getElementById('closeProjectModal');
+        const projectOverlay = document.getElementById('projectModalOverlay');
+
+        const closeProjectModal = () => {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeProjectBtn?.addEventListener('click', closeProjectModal);
+        projectOverlay?.addEventListener('click', closeProjectModal);
+
+        // Pricing Modal
+        const pricingModal = document.getElementById('pricingModal');
+        const openPricingBtn = document.getElementById('pricingModalBtn');
+        const closePricingBtn = document.getElementById('closePricingModal');
+        const pricingOverlay = document.getElementById('pricingModalOverlay');
+
+        const closePricingModal = () => {
+            pricingModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        openPricingBtn?.addEventListener('click', () => {
+            pricingModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closePricingBtn?.addEventListener('click', closePricingModal);
+        pricingOverlay?.addEventListener('click', closePricingModal);
+
+        // ESC key closes modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+                closePricingModal();
+            }
+        });
     }
 }
 
-// Initialize on DOM load
-document.addEventListener('DOMContentLoaded', () => {
-    new Portfolio();
-});
-
-// Add some interactive particles (optional)
-function createParticles() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'particles';
-    hero.appendChild(particlesContainer);
-
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-        particlesContainer.appendChild(particle);
-    }
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        new PortfolioApp();
+    });
+} else {
+    new PortfolioApp();
 }
-
-// Uncomment to enable particles
-// createParticles();

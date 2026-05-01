@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio | Junior System Developer</title>
+    <title>Rafael Mortillo | System Developer</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/animations.css">
     
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -58,7 +55,6 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-grid">
-            <!-- Left Side - Text Content -->
             <div class="hero-content">
                 <div class="hero-greeting">
                     <span class="terminal-prompt">&gt;</span>
@@ -66,7 +62,7 @@
                 </div>
                 
                 <h1 class="hero-name">
-                    <span class="name-text" data-text="Rafael Mortillo">Rafael Mortillo</span>
+                    <span class="name-text">Rafael Mortillo</span>
                 </h1>
                 
                 <h2 class="hero-title">
@@ -106,7 +102,6 @@
                 </div>
             </div>
             
-            <!-- Right Side - Profile Image -->
             <div class="hero-visual">
                 <div class="profile-container">
                     <div class="profile-glow"></div>
@@ -116,7 +111,6 @@
                         </div>
                     </div>
                     
-                    <!-- Floating Code Snippets -->
                     <div class="code-snippet snippet-1">
                         <code>&lt;Developer /&gt;</code>
                     </div>
@@ -130,7 +124,6 @@
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <div class="mouse">
                 <div class="wheel"></div>
@@ -155,7 +148,9 @@
             </div>
             
             <div class="projects-grid" id="projectsGrid">
-                <!-- Projects loaded dynamically -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <p style="color: var(--text-secondary);">Loading projects...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -170,7 +165,6 @@
             </div>
             
             <div class="skills-layout">
-                <!-- Programming Languages -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-code"></i>
@@ -239,7 +233,6 @@
                     </div>
                 </div>
                 
-                <!-- Tools & IDEs -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-tools"></i>
@@ -292,20 +285,21 @@
                 </p>
             </div>
             
-            <!-- Services Grid -->
             <div class="services-grid" id="servicesGrid">
-                <!-- Services loaded dynamically -->
-            </div>
-            
-            <!-- Work Process -->
-            <div class="work-process">
-                <h3 class="process-title">How We'll Work Together</h3>
-                <div class="process-steps" id="processSteps">
-                    <!-- Steps loaded dynamically -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <p style="color: var(--text-secondary);">Loading services...</p>
                 </div>
             </div>
             
-            <!-- Call to Action -->
+            <div class="work-process">
+                <h3 class="process-title">How We'll Work Together</h3>
+                <div class="process-steps" id="processSteps">
+                    <div style="grid-column: 1/-1; text-align: center; padding: 20px;">
+                        <p style="color: var(--text-secondary);">Loading process...</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="services-cta">
                 <div class="cta-content">
                     <h3 class="cta-title" id="ctaTitle">Ready to Start Your Project?</h3>
@@ -460,21 +454,18 @@
 
     <!-- Project Modal -->
     <div class="modal" id="projectModal">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay" id="projectModalOverlay"></div>
         <div class="modal-content">
             <button class="modal-close" id="closeProjectModal">
                 <i class="fas fa-times"></i>
             </button>
-            
-            <div class="modal-body" id="modalBody">
-                <!-- Content loaded dynamically -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
     <!-- Pricing Modal -->
     <div class="modal" id="pricingModal">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay" id="pricingModalOverlay"></div>
         <div class="modal-content pricing-modal-content">
             <button class="modal-close" id="closePricingModal">
                 <i class="fas fa-times"></i>
@@ -497,7 +488,7 @@
                             </div>
                         </div>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Responsive design (mobile-friendly)</li>
+                            <li><i class="fas fa-check"></i> Responsive design</li>
                             <li><i class="fas fa-check"></i> Up to 5 pages</li>
                             <li><i class="fas fa-check"></i> Contact form integration</li>
                             <li><i class="fas fa-check"></i> Clean UI and layout</li>
@@ -519,9 +510,9 @@
                             </div>
                         </div>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Custom system functionality</li>
-                            <li><i class="fas fa-check"></i> Database integration (MySQL)</li>
-                            <li><i class="fas fa-check"></i> Admin dashboard with login system</li>
+                            <li><i class="fas fa-check"></i> Custom functionality</li>
+                            <li><i class="fas fa-check"></i> Database integration</li>
+                            <li><i class="fas fa-check"></i> Admin dashboard</li>
                             <li><i class="fas fa-check"></i> QR / automation features</li>
                             <li><i class="fas fa-check"></i> Reports and data management</li>
                             <li><i class="fas fa-check"></i> Documentation included</li>
@@ -537,14 +528,14 @@
                             <div class="price">
                                 <span class="currency">₱</span>
                                 <span class="amount">500</span>
-                                <span class="period">– 1,500 / task</span>
+                                <span class="period">– 1,500</span>
                             </div>
                         </div>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Troubleshooting and bug fixes</li>
+                            <li><i class="fas fa-check"></i> Troubleshooting</li>
                             <li><i class="fas fa-check"></i> Software installation</li>
                             <li><i class="fas fa-check"></i> System optimization</li>
-                            <li><i class="fas fa-check"></i> Maintenance and updates</li>
+                            <li><i class="fas fa-check"></i> Maintenance</li>
                             <li><i class="fas fa-check"></i> Remote assistance</li>
                         </ul>
                         <span class="delivery-time">
@@ -556,19 +547,15 @@
                 <div class="pricing-note">
                     <i class="fas fa-info-circle"></i>
                     <p>
-                        Prices are starting estimates and may vary depending on project complexity and requirements. 
-                        <a href="#contact">Contact me</a> for a detailed and customized quote.
+                        Prices are starting estimates and may vary depending on project complexity. 
+                        <a href="#contact">Contact me</a> for a detailed quote.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="scripts/components.js"></script>
-    <script src="scripts/animations.js"></script>
-    <script src="scripts/projects.js"></script>
+    <!-- Scripts - LOAD IN THIS ORDER -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/services.js"></script>
 </body>
 </html>
