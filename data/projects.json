@@ -90,10 +90,9 @@
         "impact": "Successfully conducted 15+ elections with 100% data integrity, zero security breaches, and 95% voter satisfaction rating. Reduced election costs by 70% compared to traditional paper-based systems."
       },
       "images": [
-        "assets/images/projects/voting1.png",
-        "assets/images/projects/voting2.png",
-        "assets/images/projects/voting3.png",
-        "assets/images/projects/voting4.png"
+        "assets/images/projects/vote1.png",
+        "assets/images/projects/vote2.png",
+        "assets/images/projects/vote3.png"
       ],
       "liveUrl": "#",
       "githubUrl": "#"
