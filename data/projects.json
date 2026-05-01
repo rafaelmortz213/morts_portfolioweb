@@ -19,7 +19,15 @@
     "challenge": "Organizing school information in a clear and accessible layout while ensuring easy content updates for administrators.",
     "solution": "Built a database-driven website with an admin panel for posting and managing announcements efficiently.",
     "impact": "Improved accessibility of school updates for students and visitors through a centralized platform."
-  }
+  },
+    "images": [
+        "assets/images/projects/school1.png",
+        "assets/images/projects/school2.png",
+        "assets/images/projects/school3.png",
+        "assets/images/projects/school4.png"
+      ],
+      "liveUrl": "#",
+      "githubUrl": "#"
 },
     {
       "id": 2,
