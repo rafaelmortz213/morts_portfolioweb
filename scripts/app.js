@@ -15,6 +15,10 @@ class Portfolio {
         this.initSkillAnimations();
     }
 
+    initServices() {
+
+}
+
     // Navigation
     initNavigation() {
         const navbar = document.getElementById('navbar');

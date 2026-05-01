@@ -1,0 +1,181 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Custom System Development",
+      "category": "development",
+      "icon": "🔧",
+      "tagline": "Tailored Solutions for Your Business",
+      "description": "Build robust, database-driven systems designed specifically for your organization's needs. From attendance tracking to inventory management, I create solutions that work.",
+      "features": [
+        "Custom database design and implementation",
+        "Admin dashboards with role-based access",
+        "QR code and barcode integration",
+        "Real-time data processing and reporting",
+        "Secure authentication systems",
+        "Email and SMS notification integration"
+      ],
+      "technologies": ["Java", "MySQL", "PHP"],
+      "pricing": "Project-based",
+      "deliveryTime": "2-6 weeks",
+      "examples": [
+        "QR Attendance System with SMS alerts",
+        "Secure Voting System with real-time results",
+        "Inventory management systems"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Website Development",
+      "category": "web",
+      "icon": "🌐",
+      "tagline": "Professional Web Presence",
+      "description": "Create modern, responsive websites that represent your business professionally. Perfect for schools, small businesses, and organizations needing a digital presence.",
+      "features": [
+        "Fully responsive design (mobile, tablet, desktop)",
+        "Content management systems",
+        "Dynamic news and announcements",
+        "Contact forms with email integration",
+        "SEO-optimized structure",
+        "Fast loading and performance optimization"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "pricing": "From $300",
+      "deliveryTime": "1-4 weeks",
+      "examples": [
+        "School information websites",
+        "Small business landing pages",
+        "Portfolio and personal websites"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Database Solutions",
+      "category": "database",
+      "icon": "💾",
+      "tagline": "Organized Data, Better Decisions",
+      "description": "Design and implement efficient database systems that keep your data organized, secure, and accessible. Get insights that drive better business decisions.",
+      "features": [
+        "Database design and normalization",
+        "Data migration and import services",
+        "Backup and recovery systems",
+        "Query optimization for performance",
+        "Report generation and analytics",
+        "Multi-user access management"
+      ],
+      "technologies": ["MySQL", "Database Design", "SQL"],
+      "pricing": "From $200",
+      "deliveryTime": "1-3 weeks",
+      "examples": [
+        "Student information databases",
+        "Customer relationship management",
+        "Product and inventory databases"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "IT Support & Maintenance",
+      "category": "support",
+      "icon": "🛠️",
+      "tagline": "Keep Your Systems Running Smoothly",
+      "description": "Reliable technical support for your software, hardware, and network needs. Quick troubleshooting and maintenance to minimize downtime.",
+      "features": [
+        "Software installation and configuration",
+        "Troubleshooting and bug fixes",
+        "System updates and maintenance",
+        "Basic network setup and support",
+        "Computer optimization and cleanup",
+        "Remote and on-site assistance"
+      ],
+      "technologies": ["Windows", "Linux", "Network Tools"],
+      "pricing": "Hourly or monthly retainer",
+      "deliveryTime": "On-demand",
+      "examples": [
+        "Office computer maintenance",
+        "Software troubleshooting",
+        "Network configuration"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Academic & School Projects",
+      "category": "academic",
+      "icon": "🎓",
+      "tagline": "Educational Technology Solutions",
+      "description": "Specialized in developing systems for educational institutions and academic projects. Student-friendly pricing with professional results.",
+      "features": [
+        "Student management systems",
+        "Grade tracking and reporting",
+        "Library management systems",
+        "Event and activity scheduling",
+        "Online examination systems",
+        "Documentation and training included"
+      ],
+      "technologies": ["Java", "PHP", "MySQL", "VB"],
+      "pricing": "Student-friendly rates",
+      "deliveryTime": "1-4 weeks",
+      "examples": [
+        "School information systems",
+        "Thesis and capstone projects",
+        "Research data management"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Custom Projects & Collaboration",
+      "category": "custom",
+      "icon": "🤝",
+      "tagline": "Let's Build Something Together",
+      "description": "Have a unique idea? Open to collaborating on innovative projects, startups, or custom solutions. Let's discuss how we can work together.",
+      "features": [
+        "Flexible project scoping",
+        "Collaborative development approach",
+        "Open to new technologies",
+        "Startup-friendly engagement",
+        "Long-term partnership opportunities",
+        "Clear communication throughout"
+      ],
+      "technologies": ["Various based on project needs"],
+      "pricing": "Negotiable",
+      "deliveryTime": "Flexible",
+      "examples": [
+        "Startup MVPs",
+        "Open-source contributions",
+        "Innovation projects"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "subtitle": "Let's discuss how I can help bring your ideas to life",
+    "primaryButton": "Start a Project",
+    "secondaryButton": "View Pricing",
+    "note": "Open for freelance work, commissions, and long-term collaborations"
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "Discuss",
+      "description": "Share your project idea and requirements",
+      "icon": "💬"
+    },
+    {
+      "step": 2,
+      "title": "Plan",
+      "description": "Receive proposal with timeline and cost",
+      "icon": "📋"
+    },
+    {
+      "step": 3,
+      "title": "Build",
+      "description": "Development with regular updates",
+      "icon": "⚙️"
+    },
+    {
+      "step": 4,
+      "title": "Deploy",
+      "description": "Launch with support and documentation",
+      "icon": "🚀"
+    }
+  ]
+}
