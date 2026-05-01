@@ -19,6 +19,12 @@ class Portfolio {
 
 }
 
+closeModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
     // Navigation
     initNavigation() {
         const navbar = document.getElementById('navbar');
@@ -300,6 +306,28 @@ class Portfolio {
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+            // Close handlers
+    const closeBtn = document.getElementById('closeProjectModal');
+    const overlay = modal.querySelector('.modal-overlay');
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    // ESC key to close
+    const escHandler = (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', escHandler);
+        }
+    };
+    document.addEventListener('keydown', escHandler);
+
 
         // Initialize gallery
         this.initGallery();
