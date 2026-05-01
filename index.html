@@ -275,7 +275,90 @@
         </div>
     </section>
 
-<div class="modal-body">
+    <!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">04.</span>
+            <h2 class="section-title">Services & Offerings</h2>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="services-intro">
+            <p class="intro-text">
+                Delivering <span class="highlight">professional solutions</span> tailored to your needs. 
+                From custom systems to ongoing support, I help businesses and organizations 
+                leverage technology effectively.
+            </p>
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+            <!-- Services loaded dynamically -->
+        </div>
+        
+        <!-- Work Process -->
+        <div class="work-process">
+            <h3 class="process-title">How We'll Work Together</h3>
+            <div class="process-steps" id="processSteps">
+                <!-- Steps loaded dynamically -->
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="services-cta">
+            <div class="cta-content">
+                <h3 class="cta-title" id="ctaTitle">Ready to Start Your Project?</h3>
+                <p class="cta-subtitle" id="ctaSubtitle">
+                    Let's discuss how I can help bring your ideas to life
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>Start a Project</span>
+                    </a>
+                    <button class="btn btn-secondary" id="pricingModalBtn">
+                        <i class="fas fa-tag"></i>
+                        <span>View Pricing Guide</span>
+                    </button>
+                </div>
+                <p class="cta-note" id="ctaNote">
+                    <i class="fas fa-info-circle"></i>
+                    Open for freelance work, commissions, and long-term collaborations
+                </p>
+            </div>
+            
+            <div class="cta-badges">
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Quick Response Time</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Clear Communication</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Quality Assurance</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Post-Launch Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Modal -->
+<div class="modal" id="pricingModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content pricing-modal-content">
+        <button class="modal-close" id="closePricingModal">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="modal-body">
     <h2 class="pricing-modal-title">Pricing Guide</h2>
     <p class="pricing-modal-subtitle">
         Flexible pricing based on your project needs. Below are starting rates for common services.
