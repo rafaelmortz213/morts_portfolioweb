@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "School Information & News Website",
+      "title": "School Website",
       "category": "web",
       "icon": "🏫",
       "shortDescription": "Comprehensive school management system with dynamic news publishing and administrative controls.",
@@ -11,8 +11,6 @@
       "features": [
         "Dynamic news and announcement system with rich text editor",
         "Academic calendar with event management",
-        "Student portal for grades and attendance tracking",
-        "Admin dashboard with role-based access control",
         "Admissions management system with online application forms",
         "Responsive design optimized for all devices",
         "SEO-optimized content structure",
@@ -35,7 +33,7 @@
     {
       "id": 2,
       "title": "QR Attendance System",
-      "category": "web",
+      "category": "system",
       "icon": "📱",
       "shortDescription": "Modern attendance tracking system using QR code technology with real-time notifications via email and SMS.",
       "fullDescription": "An innovative attendance management solution that leverages QR code technology to streamline the check-in process. The system automatically generates unique QR codes for each session and sends instant notifications to stakeholders when attendance is recorded.",
@@ -66,8 +64,8 @@
     },
     {
       "id": 3,
-      "title": "Secure Voting System",
-      "category": "security",
+      "title": "Voting System",
+      "category": "system",
       "icon": "🗳️",
       "shortDescription": "Enterprise-grade electronic voting platform with real-time results, comprehensive dashboard, and bank-level security.",
       "fullDescription": "A highly secure digital voting platform designed for organizational elections. The system employs multiple layers of security including encryption, two-factor authentication, and blockchain-inspired verification to ensure vote integrity while maintaining voter anonymity.",
