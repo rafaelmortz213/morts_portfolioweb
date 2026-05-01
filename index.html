@@ -275,171 +275,85 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-<section class="services" id="services">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-number">04.</span>
-            <h2 class="section-title">Services & Offerings</h2>
-            <div class="title-line"></div>
-        </div>
-        
-        <div class="services-intro">
-            <p class="intro-text">
-                Delivering <span class="highlight">professional solutions</span> tailored to your needs. 
-                From custom systems to ongoing support, I help businesses and organizations 
-                leverage technology effectively.
-            </p>
-        </div>
-        
-        <!-- Services Grid -->
-        <div class="services-grid" id="servicesGrid">
-            <!-- Services loaded dynamically -->
-        </div>
-        
-        <!-- Work Process -->
-        <div class="work-process">
-            <h3 class="process-title">How We'll Work Together</h3>
-            <div class="process-steps" id="processSteps">
-                <!-- Steps loaded dynamically -->
-            </div>
-        </div>
-        
-        <!-- Call to Action -->
-        <div class="services-cta">
-            <div class="cta-content">
-                <h3 class="cta-title" id="ctaTitle">Ready to Start Your Project?</h3>
-                <p class="cta-subtitle" id="ctaSubtitle">
-                    Let's discuss how I can help bring your ideas to life
-                </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        <span>Start a Project</span>
-                    </a>
-                    <button class="btn btn-secondary" id="pricingModalBtn">
-                        <i class="fas fa-tag"></i>
-                        <span>View Pricing Guide</span>
-                    </button>
-                </div>
-                <p class="cta-note" id="ctaNote">
-                    <i class="fas fa-info-circle"></i>
-                    Open for freelance work, commissions, and long-term collaborations
-                </p>
-            </div>
-            
-            <div class="cta-badges">
-                <div class="badge-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Quick Response Time</span>
-                </div>
-                <div class="badge-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Clear Communication</span>
-                </div>
-                <div class="badge-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Quality Assurance</span>
-                </div>
-                <div class="badge-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Post-Launch Support</span>
+<div class="modal-body">
+    <h2 class="pricing-modal-title">Pricing Guide</h2>
+    <p class="pricing-modal-subtitle">
+        Flexible pricing based on your project needs. Below are starting rates for common services.
+    </p>
+    
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <div class="pricing-header">
+                <h3>Website Development</h3>
+                <div class="price">
+                    <span class="currency">₱</span>
+                    <span class="amount">8,000</span>
+                    <span class="period">+</span>
                 </div>
             </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Responsive design (mobile-friendly)</li>
+                <li><i class="fas fa-check"></i> Up to 5 pages</li>
+                <li><i class="fas fa-check"></i> Contact form integration</li>
+                <li><i class="fas fa-check"></i> Clean UI and layout</li>
+                <li><i class="fas fa-check"></i> Basic SEO structure</li>
+            </ul>
+            <span class="delivery-time">
+                <i class="far fa-clock"></i> 1–4 weeks
+            </span>
+        </div>
+        
+        <div class="pricing-card featured">
+            <div class="popular-badge">Most Requested</div>
+            <div class="pricing-header">
+                <h3>Custom System Development</h3>
+                <div class="price">
+                    <span class="currency">₱</span>
+                    <span class="amount">15,000</span>
+                    <span class="period">+</span>
+                </div>
+            </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Custom system functionality</li>
+                <li><i class="fas fa-check"></i> Database integration (MySQL)</li>
+                <li><i class="fas fa-check"></i> Admin dashboard with login system</li>
+                <li><i class="fas fa-check"></i> QR / automation features</li>
+                <li><i class="fas fa-check"></i> Reports and data management</li>
+                <li><i class="fas fa-check"></i> Documentation included</li>
+            </ul>
+            <span class="delivery-time">
+                <i class="far fa-clock"></i> 2–6 weeks
+            </span>
+        </div>
+        
+        <div class="pricing-card">
+            <div class="pricing-header">
+                <h3>IT Support & Maintenance</h3>
+                <div class="price">
+                    <span class="currency">₱</span>
+                    <span class="amount">500</span>
+                    <span class="period">– 1,500 / task</span>
+                </div>
+            </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Troubleshooting and bug fixes</li>
+                <li><i class="fas fa-check"></i> Software installation</li>
+                <li><i class="fas fa-check"></i> System optimization</li>
+                <li><i class="fas fa-check"></i> Maintenance and updates</li>
+                <li><i class="fas fa-check"></i> Remote assistance</li>
+            </ul>
+            <span class="delivery-time">
+                <i class="far fa-clock"></i> On-demand
+            </span>
         </div>
     </div>
-</section>
-
-<!-- Pricing Modal -->
-<div class="modal" id="pricingModal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content pricing-modal-content">
-        <button class="modal-close" id="closePricingModal">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-body">
-            <h2 class="pricing-modal-title">Pricing Guide</h2>
-            <p class="pricing-modal-subtitle">
-                Transparent pricing for common services. Custom projects quoted individually.
-            </p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Basic Website</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">300</span>
-                            <span class="period">- $500</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Up to 5 pages</li>
-                        <li><i class="fas fa-check"></i> Responsive design</li>
-                        <li><i class="fas fa-check"></i> Contact form</li>
-                        <li><i class="fas fa-check"></i> Basic SEO</li>
-                        <li><i class="fas fa-check"></i> 1 month support</li>
-                    </ul>
-                    <span class="delivery-time">
-                        <i class="far fa-clock"></i> 1-2 weeks
-                    </span>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Custom System</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">800</span>
-                            <span class="period">- $2000</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Custom functionality</li>
-                        <li><i class="fas fa-check"></i> Database design</li>
-                        <li><i class="fas fa-check"></i> Admin dashboard</li>
-                        <li><i class="fas fa-check"></i> User authentication</li>
-                        <li><i class="fas fa-check"></i> 3 months support</li>
-                        <li><i class="fas fa-check"></i> Documentation</li>
-                    </ul>
-                    <span class="delivery-time">
-                        <i class="far fa-clock"></i> 3-6 weeks
-                    </span>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>IT Support</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">25</span>
-                            <span class="period">/hour</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Troubleshooting</li>
-                        <li><i class="fas fa-check"></i> Software installation</li>
-                        <li><i class="fas fa-check"></i> System maintenance</li>
-                        <li><i class="fas fa-check"></i> Remote assistance</li>
-                        <li><i class="fas fa-check"></i> On-demand availability</li>
-                    </ul>
-                    <span class="delivery-time">
-                        <i class="far fa-clock"></i> As needed
-                    </span>
-                </div>
-            </div>
-            
-            <div class="pricing-note">
-                <i class="fas fa-info-circle"></i>
-                <p>
-                    Prices are estimates and may vary based on project complexity. 
-                    Student and non-profit discounts available. 
-                    <a href="#contact">Contact me</a> for a detailed quote.
-                </p>
-            </div>
-        </div>
+    
+    <div class="pricing-note">
+        <i class="fas fa-info-circle"></i>
+        <p>
+            Prices are starting estimates and may vary depending on project complexity and requirements. 
+            <a href="#contact">Contact me</a> for a detailed and customized quote.
+        </p>
     </div>
 </div>
 

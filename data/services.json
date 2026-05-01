@@ -5,18 +5,18 @@
       "title": "Custom System Development",
       "category": "development",
       "icon": "🔧",
-      "tagline": "Tailored Solutions for Your Business",
-      "description": "Build robust, database-driven systems designed specifically for your organization's needs. From attendance tracking to inventory management, I create solutions that work.",
+      "tagline": "Tailored Solutions for Your Organization",
+      "description": "Build efficient systems designed to automate processes and manage data easily—perfect for schools, businesses, and organizations.",
       "features": [
-        "Custom database design and implementation",
-        "Admin dashboards with role-based access",
-        "QR code and barcode integration",
-        "Real-time data processing and reporting",
-        "Secure authentication systems",
+        "Admin dashboards with secure login",
+        "QR-based systems (attendance, tracking)",
+        "Automated reports and data management",
+        "Role-based access control",
+        "Real-time data updates",
         "Email and SMS notification integration"
       ],
       "technologies": ["Java", "MySQL", "PHP"],
-      "pricing": "Project-based",
+      "pricing": "Starts at ₱15,000. Final price depends on system complexity",
       "deliveryTime": "2-6 weeks",
       "examples": [
         "QR Attendance System with SMS alerts",
@@ -30,17 +30,17 @@
       "category": "web",
       "icon": "🌐",
       "tagline": "Professional Web Presence",
-      "description": "Create modern, responsive websites that represent your business professionally. Perfect for schools, small businesses, and organizations needing a digital presence.",
+      "description": "Modern, responsive websites that help your organization establish a strong online presence.",
       "features": [
-        "Fully responsive design (mobile, tablet, desktop)",
-        "Content management systems",
-        "Dynamic news and announcements",
+        "Mobile-friendly design",
+        "Dynamic content (news, updates)",
         "Contact forms with email integration",
-        "SEO-optimized structure",
+        "Clean and professional UI",
+        "Basic SEO-optimized structure",
         "Fast loading and performance optimization"
       ],
       "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      "pricing": "From $300",
+      "pricing": "Starts at ₱8,000. Pricing depends on design and functionality",
       "deliveryTime": "1-4 weeks",
       "examples": [
         "School information websites",
@@ -50,26 +50,26 @@
     },
     {
       "id": 3,
-      "title": "Database Solutions",
-      "category": "database",
-      "icon": "💾",
-      "tagline": "Organized Data, Better Decisions",
-      "description": "Design and implement efficient database systems that keep your data organized, secure, and accessible. Get insights that drive better business decisions.",
+      "title": "School Management & Educational Systems",
+      "category": "development",
+      "icon": "🏫",
+      "tagline": "Smart Solutions for Schools",
+      "description": "Systems designed for schools and academic institutions to efficiently manage students, records, and operations.",
       "features": [
-        "Database design and normalization",
-        "Data migration and import services",
-        "Backup and recovery systems",
-        "Query optimization for performance",
-        "Report generation and analytics",
-        "Multi-user access management"
+        "Student information systems",
+        "Grade tracking and reporting",
+        "Attendance and QR-based tracking",
+        "Library management systems",
+        "Event and scheduling systems",
+        "Multi-user access with admin controls"
       ],
-      "technologies": ["MySQL", "Database Design", "SQL"],
-      "pricing": "From $200",
-      "deliveryTime": "1-3 weeks",
+      "technologies": ["Java", "PHP", "MySQL"],
+      "pricing": "Starts at ₱12,000. Final cost depends on system scope",
+      "deliveryTime": "2-5 weeks",
       "examples": [
-        "Student information databases",
-        "Customer relationship management",
-        "Product and inventory databases"
+        "Student management systems",
+        "Attendance tracking platforms",
+        "School event and scheduling systems"
       ]
     },
     {
@@ -78,7 +78,7 @@
       "category": "support",
       "icon": "🛠️",
       "tagline": "Keep Your Systems Running Smoothly",
-      "description": "Reliable technical support for your software, hardware, and network needs. Quick troubleshooting and maintenance to minimize downtime.",
+      "description": "Reliable technical support for your software, hardware, and systems to ensure smooth and uninterrupted operations.",
       "features": [
         "Software installation and configuration",
         "Troubleshooting and bug fixes",
@@ -88,60 +88,12 @@
         "Remote and on-site assistance"
       ],
       "technologies": ["Windows", "Linux", "Network Tools"],
-      "pricing": "Hourly or monthly retainer",
+      "pricing": "₱500 – ₱1,500 per task depending on complexity",
       "deliveryTime": "On-demand",
       "examples": [
         "Office computer maintenance",
         "Software troubleshooting",
-        "Network configuration"
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Academic & School Projects",
-      "category": "academic",
-      "icon": "🎓",
-      "tagline": "Educational Technology Solutions",
-      "description": "Specialized in developing systems for educational institutions and academic projects. Student-friendly pricing with professional results.",
-      "features": [
-        "Student management systems",
-        "Grade tracking and reporting",
-        "Library management systems",
-        "Event and activity scheduling",
-        "Online examination systems",
-        "Documentation and training included"
-      ],
-      "technologies": ["Java", "PHP", "MySQL", "VB"],
-      "pricing": "Student-friendly rates",
-      "deliveryTime": "1-4 weeks",
-      "examples": [
-        "School information systems",
-        "Thesis and capstone projects",
-        "Research data management"
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Custom Projects & Collaboration",
-      "category": "custom",
-      "icon": "🤝",
-      "tagline": "Let's Build Something Together",
-      "description": "Have a unique idea? Open to collaborating on innovative projects, startups, or custom solutions. Let's discuss how we can work together.",
-      "features": [
-        "Flexible project scoping",
-        "Collaborative development approach",
-        "Open to new technologies",
-        "Startup-friendly engagement",
-        "Long-term partnership opportunities",
-        "Clear communication throughout"
-      ],
-      "technologies": ["Various based on project needs"],
-      "pricing": "Negotiable",
-      "deliveryTime": "Flexible",
-      "examples": [
-        "Startup MVPs",
-        "Open-source contributions",
-        "Innovation projects"
+        "System performance optimization"
       ]
     }
   ],
@@ -149,8 +101,8 @@
     "title": "Ready to Start Your Project?",
     "subtitle": "Let's discuss how I can help bring your ideas to life",
     "primaryButton": "Start a Project",
-    "secondaryButton": "View Pricing",
-    "note": "Open for freelance work, commissions, and long-term collaborations"
+    "secondaryButton": "View Services",
+    "note": "Pricing varies depending on project scope. Contact me for a custom quote."
   },
   "process": [
     {
@@ -162,19 +114,19 @@
     {
       "step": 2,
       "title": "Plan",
-      "description": "Receive proposal with timeline and cost",
+      "description": "Receive a proposal with timeline and cost estimate",
       "icon": "📋"
     },
     {
       "step": 3,
       "title": "Build",
-      "description": "Development with regular updates",
+      "description": "Development with regular updates and progress tracking",
       "icon": "⚙️"
     },
     {
       "step": 4,
       "title": "Deploy",
-      "description": "Launch with support and documentation",
+      "description": "Launch your project with support and documentation",
       "icon": "🚀"
     }
   ]
