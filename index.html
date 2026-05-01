@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Junior System Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="terminal-prompt">$</span>
+                <span class="brand-text">morts_dev</span>
+                <span class="cursor-blink">_</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">
+                    <span class="nav-number">01.</span> Home
+                </a>
+                <a href="#projects" class="nav-link">
+                    <span class="nav-number">02.</span> Projects
+                </a>
+                <a href="#skills" class="nav-link">
+                    <span class="nav-number">03.</span> Skills
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-number">04.</span> Contact
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <!-- Left Side - Text Content -->
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="terminal-prompt">&gt;</span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                
+                <h1 class="hero-name">
+                    <span class="name-text" data-text="Your Name">Rafael Mortillo</span>
+                </h1>
+                
+                <h2 class="hero-title">
+                    <span class="typing-text">Junior System Developer</span>
+                </h2>
+                
+                <p class="hero-tagline">
+                    I build <span class="highlight">robust systems</span> and 
+                    <span class="highlight">scalable solutions</span> that solve real-world problems. 
+                    Specializing in enterprise-level applications with clean architecture.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Projects Deployed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Side - Profile Image -->
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-glow"></div>
+                    <div class="profile-hexagon">
+                        <div class="hexagon-inner">
+                            <img src="assets/images/profile.jpg" alt="Profile" class="profile-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Code Snippets -->
+                    <div class="code-snippet snippet-1">
+                        <code>&lt;Developer /&gt;</code>
+                    </div>
+                    <div class="code-snippet snippet-2">
+                        <code>{ fullStack: true }</code>
+                    </div>
+                    <div class="code-snippet snippet-3">
+                        <code>system.execute()</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Systems</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="skills-layout">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="95">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML & CSS</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-header">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-header">
+                                <span class="skill-name">VB 6.0</span>
+                                <span class="skill-level">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--skill-level: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & IDEs -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Development Tools
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>VS Code</h4>
+                            <p>Primary Editor</p>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h4>NetBeans</h4>
+                            <p>Java Development</p>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-eclipse"></i>
+                            </div>
+                            <h4>Eclipse IDE</h4>
+                            <p>Enterprise Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Amazing</h3>
+                    <p>
+                        I'm currently available for freelance work and full-time opportunities. 
+                        Whether you have a project in mind or just want to chat about technology, 
+                        feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:rafaelmortz@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">rafaelmortz@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://facebook.com/itsrafaelmortz" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Facebook</span>
+                                <span class="method-value">itsrafaelmortz</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://discord.com/users/yourid" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Discord</span>
+                                <span class="method-value">YourUsername#0000</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/yourusername" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">@yourusername</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <a href="assets/cv/developer-cv.pdf" download class="btn btn-download">
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+                
+                <div class="contact-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <span class="terminal-title">contact.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="terminal-prompt">$</span> ./initiate-contact.sh</p>
+                            <p class="terminal-output">Initializing connection...</p>
+                            <p class="terminal-output success">✓ Email ready</p>
+                            <p class="terminal-output success">✓ Social links active</p>
+                            <p class="terminal-output success">✓ CV available for download</p>
+                            <p><span class="terminal-prompt">$</span> <span class="cursor-blink">_</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Rafael Mortillo. Built with <span class="highlight">passion</span> and <span class="highlight">coffee</span>.</p>
+            <div class="footer-links">
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://facebook.com/itsrafaelmortz" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://discord.com/users/yourid" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-body" id="modalBody">
+                <!-- Content loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/components.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

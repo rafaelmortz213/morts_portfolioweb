@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "School Information & News Website",
+      "category": "web",
+      "icon": "🏫",
+      "shortDescription": "Comprehensive school management system with dynamic news publishing and administrative controls.",
+      "fullDescription": "A full-featured school information system designed to provide students, parents, and staff with real-time access to academic information, announcements, and school news. The platform features a powerful admin panel for content management and multi-level user authentication.",
+      "techStack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+      "features": [
+        "Dynamic news and announcement system with rich text editor",
+        "Academic calendar with event management",
+        "Student portal for grades and attendance tracking",
+        "Admin dashboard with role-based access control",
+        "Admissions management system with online application forms",
+        "Responsive design optimized for all devices",
+        "SEO-optimized content structure",
+        "Email notification system for important updates"
+      ],
+      "highlights": {
+        "challenge": "Managing complex relationships between different user roles (students, teachers, admin) while maintaining data security and providing real-time updates.",
+        "solution": "Implemented a robust role-based authentication system with JWT tokens and created a modular architecture that separates concerns between different user interfaces.",
+        "impact": "Reduced administrative workload by 40% and improved parent-school communication efficiency by providing 24/7 access to student information and school updates."
+      },
+      "images": [
+        "assets/images/projects/school1.png",
+        "assets/images/projects/school2.png",
+        "assets/images/projects/school3.png",
+        "assets/images/projects/school4.png"
+      ],
+      "liveUrl": "#",
+      "githubUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "QR Attendance System",
+      "category": "web",
+      "icon": "📱",
+      "shortDescription": "Modern attendance tracking system using QR code technology with real-time notifications via email and SMS.",
+      "fullDescription": "An innovative attendance management solution that leverages QR code technology to streamline the check-in process. The system automatically generates unique QR codes for each session and sends instant notifications to stakeholders when attendance is recorded.",
+      "techStack": ["Java", "MySQL", "JavaMail API", "Twilio API", "QR Code Library", "Swing"],
+      "features": [
+        "Automatic QR code generation for each attendance session",
+        "Real-time attendance tracking with timestamp verification",
+        "Dual notification system (Email + SMS)",
+        "Attendance analytics and reporting dashboard",
+        "Export functionality (PDF, Excel, CSV)",
+        "Multi-location support for distributed organizations",
+        "Attendance history with search and filter options",
+        "Anti-fraud measures with unique token validation"
+      ],
+      "highlights": {
+        "challenge": "Ensuring accurate attendance records while preventing fraud attempts such as duplicate scans or unauthorized QR code sharing.",
+        "solution": "Implemented time-sensitive QR codes that expire after each session and added GPS-based location verification to ensure physical presence at the designated location.",
+        "impact": "Increased attendance tracking accuracy to 99.8% and reduced processing time from 15 minutes to under 2 minutes per session, serving 500+ daily users."
+      },
+      "images": [
+        "assets/images/projects/qr1.png",
+        "assets/images/projects/qr2.png",
+        "assets/images/projects/qr3.png",
+        "assets/images/projects/qr4.png"
+      ],
+      "liveUrl": "#",
+      "githubUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "Secure Voting System",
+      "category": "security",
+      "icon": "🗳️",
+      "shortDescription": "Enterprise-grade electronic voting platform with real-time results, comprehensive dashboard, and bank-level security.",
+      "fullDescription": "A highly secure digital voting platform designed for organizational elections. The system employs multiple layers of security including encryption, two-factor authentication, and blockchain-inspired verification to ensure vote integrity while maintaining voter anonymity.",
+      "techStack": ["Java", "MySQL", "AES Encryption", "SHA-256", "JavaFX", "Apache POI"],
+      "features": [
+        "End-to-end encrypted voting process",
+        "Two-factor authentication for voter verification",
+        "Real-time vote counting and results display",
+        "Comprehensive admin dashboard with analytics",
+        "Voter anonymity protection with encrypted ballot storage",
+        "Audit trail for transparency and verification",
+        "Multiple election support with different voting methods",
+        "Automated result calculation and reporting",
+        "Vote verification receipts without compromising anonymity",
+        "Session management with timeout protection"
+      ],
+      "highlights": {
+        "challenge": "Balancing complete voter anonymity with the need for vote verification and audit capabilities while preventing any form of vote manipulation.",
+        "solution": "Developed a unique encryption scheme where votes are encrypted with one-way hashing combined with randomized salt values. Implemented a separate verification system that allows voters to confirm their vote was counted without revealing their identity.",
+        "impact": "Successfully conducted 15+ elections with 100% data integrity, zero security breaches, and 95% voter satisfaction rating. Reduced election costs by 70% compared to traditional paper-based systems."
+      },
+      "images": [
+        "assets/images/projects/voting1.png",
+        "assets/images/projects/voting2.png",
+        "assets/images/projects/voting3.png",
+        "assets/images/projects/voting4.png"
+      ],
+      "liveUrl": "#",
+      "githubUrl": "#"
+    }
+  ]
+}
