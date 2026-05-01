@@ -1,35 +1,26 @@
 {
   "projects": [
     {
-      "id": 1,
-      "title": "School Website",
-      "category": "web",
-      "icon": "🏫",
-      "shortDescription": "Comprehensive school management system with dynamic news publishing and administrative controls.",
-      "fullDescription": "A full-featured school information system designed to provide students, parents, and staff with real-time access to academic information, announcements, and school news. The platform features a powerful admin panel for content management and multi-level user authentication.",
-      "techStack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
-      "features": [
-        "Dynamic news and announcement system with rich text editor",
-        "Academic calendar with event management",
-        "Admissions management system with online application forms",
-        "Responsive design optimized for all devices",
-        "SEO-optimized content structure",
-        "Email notification system for important updates"
-      ],
-      "highlights": {
-        "challenge": "Managing complex relationships between different user roles (students, teachers, admin) while maintaining data security and providing real-time updates.",
-        "solution": "Implemented a robust role-based authentication system with JWT tokens and created a modular architecture that separates concerns between different user interfaces.",
-        "impact": "Reduced administrative workload by 40% and improved parent-school communication efficiency by providing 24/7 access to student information and school updates."
-      },
-      "images": [
-        "assets/images/projects/school1.png",
-        "assets/images/projects/school2.png",
-        "assets/images/projects/school3.png",
-        "assets/images/projects/school4.png"
-      ],
-      "liveUrl": "#",
-      "githubUrl": "#"
-    },
+  "id": 1,
+  "title": "School Website",
+  "category": "web",
+  "icon": "🏫",
+  "shortDescription": "Responsive school website with news, announcements, and basic admin content management.",
+  "fullDescription": "A school website designed to provide students and visitors with updated announcements, news, and school information. The system includes a simple admin panel for managing posts and content updates.",
+  "techStack": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+  "features": [
+    "News and announcement posting system",
+    "Admin panel for content management",
+    "Responsive design for mobile and desktop",
+    "Basic database-driven content storage",
+    "Simple and user-friendly interface"
+  ],
+  "highlights": {
+    "challenge": "Organizing school information in a clear and accessible layout while ensuring easy content updates for administrators.",
+    "solution": "Built a database-driven website with an admin panel for posting and managing announcements efficiently.",
+    "impact": "Improved accessibility of school updates for students and visitors through a centralized platform."
+  }
+},
     {
       "id": 2,
       "title": "QR Attendance System",
@@ -49,10 +40,10 @@
         "Anti-fraud measures with unique token validation"
       ],
       "highlights": {
-        "challenge": "Ensuring accurate attendance records while preventing fraud attempts such as duplicate scans or unauthorized QR code sharing.",
-        "solution": "Implemented time-sensitive QR codes that expire after each session and added GPS-based location verification to ensure physical presence at the designated location.",
-        "impact": "Increased attendance tracking accuracy to 99.8% and reduced processing time from 15 minutes to under 2 minutes per session, serving 500+ daily users."
-      },
+        "challenge": "Ensuring accurate and fast attendance recording while preventing duplicate QR scans.",
+        "solution": "Implemented unique session-based QR codes with timestamp validation and database verification to prevent duplicate entries.",
+        "impact": "Reduced manual attendance checking time and improved accuracy of attendance records."
+    },
       "images": [
         "assets/images/projects/qr1.png",
         "assets/images/projects/qr2.png",
@@ -72,7 +63,6 @@
       "techStack": ["Java", "MySQL", "AES Encryption", "SHA-256", "JavaFX", "Apache POI"],
       "features": [
         "End-to-end encrypted voting process",
-        "Two-factor authentication for voter verification",
         "Real-time vote counting and results display",
         "Comprehensive admin dashboard with analytics",
         "Voter anonymity protection with encrypted ballot storage",
@@ -82,11 +72,11 @@
         "Vote verification receipts without compromising anonymity",
         "Session management with timeout protection"
       ],
-      "highlights": {
-        "challenge": "Balancing complete voter anonymity with the need for vote verification and audit capabilities while preventing any form of vote manipulation.",
-        "solution": "Developed a unique encryption scheme where votes are encrypted with one-way hashing combined with randomized salt values. Implemented a separate verification system that allows voters to confirm their vote was counted without revealing their identity.",
-        "impact": "Successfully conducted 15+ elections with 100% data integrity, zero security breaches, and 95% voter satisfaction rating. Reduced election costs by 70% compared to traditional paper-based systems."
-      },
+        "highlights": {
+            "challenge": "Ensuring secure and fair voting while maintaining voter anonymity and preventing duplicate votes.",
+            "solution": "Implemented encryption techniques and unique voter validation to secure the voting process and prevent multiple submissions.",
+            "impact": "Successfully digitized election process, improving speed of vote counting and reducing manual errors."
+        },
       "images": [
         "assets/images/projects/vote1.png",
         "assets/images/projects/vote2.png",
